@@ -1,5 +1,6 @@
 import random
 from time import sleep
+from multiprocessing import Pool
 
 urls = ['a.com', 'b.com', 'c.com', 'd.com']
 
@@ -18,4 +19,11 @@ def secuencial(urls):
   for url in urls:
     result = scrape(url)
     output.append(result)
-  
+
+def multiproceso(urls):
+  pool = Pool(processes = 4) # Contamos con 4 procesadores porque en nuestra lista de urls tenemos 4 elementos.
+  data = pool.map(scrape, urls) # pool.map llama a la función scrape con cada url de urls y la salida la guarda en la variable data.
+  pool.close()
+  print()
+  for row in data:
+    print(row)  
