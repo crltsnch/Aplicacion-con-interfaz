@@ -57,3 +57,6 @@ if __name__ == '__main__':
     # Comparando los tiempos de trabajo secuencial con el de multiproceso podemos afirmar que tarda menos con multiproceso.
 
 ```
+# Conclusiones
+
+Con este ejercicio hemos aprendido que trabajando con multiproceso es más rápido que trabajando de manera secuencial, es decir, es mucho más efectivo hacer varios procesos a la vez que esperar a que termine uno para hacer el siguiente. También hemos visto que si elegimos 4 procesadores y tenemos 5 procesos, se queda uno sin ejecutar porque los 4 procesadores están ocupados. Hasta que no acabe uno de los 4 procesadores el quinto proceso no empieza a ejecutarse.
